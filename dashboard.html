@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard</title>
+</head>
+<body>
+    <h1>Welcome to the Dashboard</h1>
+    <a href="/update_profile">Update Profile</a>
+    <h2>Posts</h2>
+    {% for post in posts %}
+        <div>
+            <p>{{ post.content }}</p>
+            <a href="/like/{{ post.id }}">Like</a>
+        </div>
+    {% endfor %}
+</body>
+</html>
